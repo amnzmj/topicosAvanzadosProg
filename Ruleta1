@@ -1,0 +1,18 @@
+import random
+
+def ruleta_rusa():
+    # Simulamos un revólver con 6 cámaras y una bala
+    camara_con_bala = random.randint(1, 6)
+    
+    # El jugador elige una cámara al azar
+    eleccion_jugador = random.randint(1, 6)
+    
+    # Comparamos la elección del jugador con la cámara que tiene la bala
+    if eleccion_jugador == camara_con_bala:
+        return "¡BANG! Has perdido."
+    else:
+        return "¡Click! Has sobrevivido."
+
+# Ejecutamos la simulación
+resultado = ruleta_rusa()
+print(resultado)
